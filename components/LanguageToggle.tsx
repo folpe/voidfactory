@@ -1,7 +1,7 @@
 "use client"
 
-import { useLanguage } from "contexts/LanguageContext"
 import { motion } from "motion/react"
+import { useLanguage } from "contexts/LanguageContext"
 
 export const LanguageToggle = () => {
   const { language, setLanguage } = useLanguage()

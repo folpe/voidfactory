@@ -53,9 +53,7 @@ export const CinematicFooter = () => {
             <p className="text-sm text-[#BFC3C8]/40">
               © 2025 <span className="text-[#BFC3C8]/60">Void Corp</span>. {translations.footer.copyright[language]}
             </p>
-            <p className="text-xs tracking-wider text-[#BFC3C8]/30 uppercase">
-              {translations.footer.forged[language]}
-            </p>
+            <p className="text-xs tracking-wider text-[#BFC3C8]/30 uppercase">{translations.footer.forged[language]}</p>
           </motion.div>
 
           {/* Decorative Elements */}
