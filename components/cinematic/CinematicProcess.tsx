@@ -54,20 +54,41 @@ export const CinematicProcess = () => {
         </motion.div>
 
         {/* Pillars Container */}
-        <div className="flex flex-col items-center justify-center gap-20 md:flex-row md:items-start md:gap-0">
+        <div className="relative flex flex-col items-center justify-center gap-20 md:flex-row md:items-start md:gap-0">
+          {/* Continuous Connecting Line - Hidden on mobile */}
+          <motion.div
+            initial={{ scaleX: 0 }}
+            whileInView={{ scaleX: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 1.5, delay: 0.5 }}
+            className="absolute left-0 right-0 top-16 hidden h-[2px] overflow-hidden bg-[#FF6E2E]/20 md:block"
+            style={{ width: "calc(100% - 140px)", left: "70px" }}
+          >
+            {/* K2000-style moving light */}
+            <motion.div
+              animate={{
+                x: ["-100%", "200%"],
+              }}
+              transition={{
+                duration: 3,
+                repeat: Infinity,
+                ease: "linear",
+              }}
+              className="absolute inset-y-0 w-[30%] bg-gradient-to-r from-transparent via-[#FF6E2E] to-transparent"
+            ></motion.div>
+          </motion.div>
+
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon
             return (
-              <>
-                {/* Pillar */}
-                <motion.div
-                  key={`pillar-${index}`}
-                  initial={{ opacity: 0, y: 60 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.8, delay: index * 0.2 }}
-                  className="group flex flex-col items-center"
-                >
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="group relative z-10 flex flex-col items-center"
+              >
                   {/* Icon Container */}
                   <div className="relative mb-8 flex h-32 w-32 items-center justify-center">
                     {/* Outer Ring */}
@@ -108,34 +129,7 @@ export const CinematicProcess = () => {
                     </h3>
                     <p className="text-base leading-relaxed text-[#BFC3C8]/60 md:text-lg">{pillar.description}</p>
                   </div>
-                </motion.div>
-
-                {/* Horizontal Connecting Line - Only between pillars, hidden on mobile */}
-                {index < pillars.length - 1 && (
-                  <motion.div
-                    key={`line-${index}`}
-                    initial={{ scaleX: 0 }}
-                    whileInView={{ scaleX: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                    className="relative mt-16 hidden h-[2px] w-32 overflow-hidden bg-[#FF6E2E]/20 md:block"
-                  >
-                    {/* K2000-style moving light */}
-                    <motion.div
-                      animate={{
-                        x: ["-100%", "200%"],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        ease: "linear",
-                        delay: index * 0.3,
-                      }}
-                      className="absolute inset-y-0 w-[50%] bg-gradient-to-r from-transparent via-[#FF6E2E] to-transparent"
-                    ></motion.div>
-                  </motion.div>
-                )}</>
-
+              </motion.div>
             )
           })}
         </div>
