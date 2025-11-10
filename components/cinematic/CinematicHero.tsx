@@ -3,6 +3,8 @@
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
+import { ScrollIndicator } from "./ScrollIndicator"
+
 export const CinematicHero = () => {
   const t = useTranslations("hero")
 
@@ -123,6 +125,9 @@ export const CinematicHero = () => {
           className="mx-auto h-[2px] w-32 bg-gradient-to-r from-transparent via-[#FF6E2E] to-transparent"
         />
       </div>
+
+      {/* Scroll Indicator */}
+      <ScrollIndicator />
 
       {/* Bottom Gradient Fade */}
       <div className="pointer-events-none absolute right-0 bottom-0 left-0 h-48 bg-gradient-to-t from-[#0E0E10] to-transparent"></div>
