@@ -2,7 +2,7 @@
 
 import { cva } from "class-variance-authority"
 import { Globe } from "lucide-react"
-import { motion } from "motion/react"
+import { AnimatePresence, motion } from "motion/react"
 import { useRouter } from "next/navigation"
 import { useLocale } from "next-intl"
 import { useEffect, useRef, useState, useTransition } from "react"
@@ -70,39 +70,48 @@ export function LanguageToggle() {
   }
 
   return (
-    <div className="relative" ref={dropdownRef}>
-      <motion.button
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-gray-900/50 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:border-orange-400/50 hover:bg-gray-900/70"
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        disabled={isPending}
-      >
-        <Globe className="h-4 w-4 text-orange-400" strokeWidth={2} />
-        <span className="text-sm font-medium text-orange-300/90 uppercase">{locale}</span>
-      </motion.button>
-
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -10 }}
-          className="absolute top-full right-0 mt-2 min-w-[100px] overflow-hidden rounded-lg border border-orange-500/30 bg-gray-900/95 backdrop-blur-md"
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="fixed top-8 right-8 z-50"
+    >
+      <div className="relative" ref={dropdownRef}>
+        <motion.button
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-gray-900/50 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:border-orange-400/50 hover:bg-gray-900/70"
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          disabled={isPending}
         >
-          <button
-            onClick={() => handleLanguageChange("en")}
-            className={languageButtonVariants({ active: locale === "en" })}
-          >
-            English
-          </button>
-          <button
-            onClick={() => handleLanguageChange("fr")}
-            className={languageButtonVariants({ active: locale === "fr" })}
-          >
-            Français
-          </button>
-        </motion.div>
-      )}
-    </div>
+          <Globe className="h-4 w-4 text-orange-400" strokeWidth={2} />
+          <span className="text-sm font-medium uppercase text-orange-300/90">{locale}</span>
+        </motion.button>
+
+        <AnimatePresence>
+          {isOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              className="absolute right-0 top-full mt-2 min-w-[100px] overflow-hidden rounded-lg border border-orange-500/30 bg-gray-900/95 backdrop-blur-md"
+            >
+              <button
+                onClick={() => handleLanguageChange("en")}
+                className={languageButtonVariants({ active: locale === "en" })}
+              >
+                English
+              </button>
+              <button
+                onClick={() => handleLanguageChange("fr")}
+                className={languageButtonVariants({ active: locale === "fr" })}
+              >
+                Français
+              </button>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </div>
+    </motion.div>
   )
 }
