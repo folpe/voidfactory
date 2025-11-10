@@ -1,7 +1,7 @@
 "use client"
 
+import { type ReactNode } from "react"
 import { LanguageProvider } from "contexts/LanguageContext"
-import { ReactNode } from "react"
 
 export function ClientLayout({ children }: { children: ReactNode }) {
   return <LanguageProvider>{children}</LanguageProvider>

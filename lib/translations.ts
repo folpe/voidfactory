@@ -193,14 +193,23 @@ export const translations = {
   },
 }
 
-export function getTranslation(key: string, lang: Language): any {
+export function getTranslation(key: string, lang: Language): string {
   const keys = key.split(".")
-  let value: any = translations
+  let value: unknown = translations
 
   for (const k of keys) {
-    value = value[k]
-    if (value === undefined) return key
+    if (value && typeof value === "object" && k in (value as Record<string, unknown>)) {
+      value = (value as Record<string, unknown>)[k]
+    } else {
+      return key
+    }
   }
 
-  return value[lang] || key
+  if (value && typeof value === "object") {
+    const candidate = (value as Record<string, unknown>)[lang]
+    if (typeof candidate === "string") {
+      return candidate
+    }
+  }
+  return key
 }
