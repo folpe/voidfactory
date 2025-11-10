@@ -53,35 +53,22 @@ export const CinematicProcess = () => {
           </h2>
         </motion.div>
 
-        {/* Pillars Grid */}
-        <div className="grid gap-16 md:grid-cols-3">
+        {/* Pillars Container */}
+        <div className="flex flex-col items-center justify-center gap-20 md:flex-row md:gap-0">
           {pillars.map((pillar, index) => {
             const Icon = pillar.icon
             return (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 60 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="group relative"
-              >
-                {/* Connecting Line */}
-                {index < pillars.length - 1 && (
-                  <div className="absolute top-16 left-[60%] hidden h-[1px] w-full md:block">
-                    <motion.div
-                      initial={{ scaleX: 0 }}
-                      whileInView={{ scaleX: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
-                      className="h-full w-full origin-left bg-gradient-to-r from-[#FF6E2E]/30 to-transparent"
-                    ></motion.div>
-                  </div>
-                )}
-
-                <div className="relative">
+              <div key={index} className="flex items-center">
+                {/* Pillar */}
+                <motion.div
+                  initial={{ opacity: 0, y: 60 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  className="group flex flex-col items-center"
+                >
                   {/* Icon Container */}
-                  <div className="relative mb-8 inline-flex h-32 w-32 items-center justify-center">
+                  <div className="relative mb-8 flex h-32 w-32 items-center justify-center">
                     {/* Outer Ring */}
                     <motion.div
                       animate={{
@@ -114,13 +101,25 @@ export const CinematicProcess = () => {
                   </div>
 
                   {/* Content */}
-                  <h3 className="mb-4 text-4xl font-bold text-[#BFC3C8] transition-colors duration-300 group-hover:text-[#FF6E2E]">
-                    {pillar.title}
-                  </h3>
+                  <div className="max-w-[280px] text-center">
+                    <h3 className="mb-4 text-3xl font-bold text-[#BFC3C8] transition-colors duration-300 group-hover:text-[#FF6E2E] md:text-4xl">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-base leading-relaxed text-[#BFC3C8]/60 md:text-lg">{pillar.description}</p>
+                  </div>
+                </motion.div>
 
-                  <p className="text-lg leading-relaxed text-[#BFC3C8]/60">{pillar.description}</p>
-                </div>
-              </motion.div>
+                {/* Vertical Connecting Line - Only between pillars, hidden on mobile */}
+                {index < pillars.length - 1 && (
+                  <motion.div
+                    initial={{ scaleY: 0 }}
+                    whileInView={{ scaleY: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1, delay: 0.5 + index * 0.2 }}
+                    className="mx-12 hidden h-[200px] w-[1px] origin-top bg-gradient-to-b from-transparent via-[#FF6E2E]/30 to-transparent md:block"
+                  ></motion.div>
+                )}
+              </div>
             )
           })}
         </div>
