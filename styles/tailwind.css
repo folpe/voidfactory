@@ -1,5 +1,5 @@
-@import 'tailwindcss';
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;700;800&family=Inter:wght@400;500;600&display=swap");
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -22,45 +22,46 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* v0rn Brand Colors */
-  --color-background-black: #0E0E10;
-  --color-surface-iron: #3C3F44;
-  --color-accent-ember: #FF6E2E;
-  --color-neutral-silver: #BFC3C8;
-  --color-ai-deep-blue: #297FFF;
+  /* void factory Brand Colors */
+  --color-background-black: #0e0e10;
+  --color-surface-iron: #3c3f44;
+  --color-accent-ember: #ff6e2e;
+  --color-neutral-silver: #bfc3c8;
+  --color-voidcorp: #8929ff;
+  --color-primary: #297fff;
 
   /* Legacy Support */
   --font-size: 16px;
-  --background: #0E0E10;
-  --foreground: #BFC3C8;
-  --card: #1A1A1D;
-  --card-foreground: #BFC3C8;
-  --popover: #1A1A1D;
-  --popover-foreground: #BFC3C8;
-  --primary: #FF6E2E;
-  --primary-foreground: #0E0E10;
-  --secondary: #3C3F44;
-  --secondary-foreground: #BFC3C8;
-  --muted: #3C3F44;
-  --muted-foreground: #BFC3C8;
-  --accent: #FF6E2E;
-  --accent-foreground: #0E0E10;
+  --background: #0e0e10;
+  --foreground: #bfc3c8;
+  --card: #1a1a1d;
+  --card-foreground: #bfc3c8;
+  --popover: #1a1a1d;
+  --popover-foreground: #bfc3c8;
+  --primary: #297fff;
+  --primary-foreground: #0e0e10;
+  --secondary: #3c3f44;
+  --secondary-foreground: #bfc3c8;
+  --muted: #3c3f44;
+  --muted-foreground: #bfc3c8;
+  --accent: #00f0ff;
+  --accent-foreground: #0e0e10;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(191, 195, 200, 0.1);
   --input: transparent;
-  --input-background: #1A1A1D;
-  --switch-background: #3C3F44;
+  --input-background: #1a1a1d;
+  --switch-background: #3c3f44;
   --font-weight-bold: 700;
   --font-weight-semibold: 600;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #FF6E2E;
-  --chart-1: #FF6E2E;
-  --chart-2: #297FFF;
-  --chart-3: #3C3F44;
-  --chart-4: #BFC3C8;
-  --chart-5: #0E0E10;
+  --ring: #297fff;
+  --chart-1: #00f0ff;
+  --chart-2: #297fff;
+  --chart-3: #3c3f44;
+  --chart-4: #bfc3c8;
+  --chart-5: #0e0e10;
 
   /* Spacing Scale */
   --spacing-1: 4px;
@@ -98,50 +99,51 @@
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
   --shadow-glow-ember: 0 0 20px rgba(255, 110, 46, 0.3), 0 0 40px rgba(255, 110, 46, 0.15);
   --shadow-glow-blue: 0 0 20px rgba(41, 127, 255, 0.3), 0 0 40px rgba(41, 127, 255, 0.15);
+  --shadow-glow-electric: 0 0 20px rgba(0, 240, 255, 0.4), 0 0 40px rgba(0, 240, 255, 0.2);
 
-  --sidebar: #0E0E10;
-  --sidebar-foreground: #BFC3C8;
-  --sidebar-primary: #FF6E2E;
-  --sidebar-primary-foreground: #0E0E10;
-  --sidebar-accent: #3C3F44;
-  --sidebar-accent-foreground: #BFC3C8;
+  --sidebar: #0e0e10;
+  --sidebar-foreground: #bfc3c8;
+  --sidebar-primary: #00f0ff;
+  --sidebar-primary-foreground: #0e0e10;
+  --sidebar-accent: #3c3f44;
+  --sidebar-accent-foreground: #bfc3c8;
   --sidebar-border: rgba(191, 195, 200, 0.1);
-  --sidebar-ring: #FF6E2E;
+  --sidebar-ring: #00f0ff;
 }
 
 .dark {
-  --background: #0E0E10;
-  --foreground: #BFC3C8;
-  --card: #1A1A1D;
-  --card-foreground: #BFC3C8;
-  --popover: #1A1A1D;
-  --popover-foreground: #BFC3C8;
-  --primary: #FF6E2E;
-  --primary-foreground: #0E0E10;
-  --secondary: #3C3F44;
-  --secondary-foreground: #BFC3C8;
-  --muted: #3C3F44;
-  --muted-foreground: #BFC3C8;
-  --accent: #FF6E2E;
-  --accent-foreground: #0E0E10;
+  --background: #0e0e10;
+  --foreground: #bfc3c8;
+  --card: #1a1a1d;
+  --card-foreground: #bfc3c8;
+  --popover: #1a1a1d;
+  --popover-foreground: #bfc3c8;
+  --primary: #297fff;
+  --primary-foreground: #0e0e10;
+  --secondary: #3c3f44;
+  --secondary-foreground: #bfc3c8;
+  --muted: #3c3f44;
+  --muted-foreground: #bfc3c8;
+  --accent: #00f0ff;
+  --accent-foreground: #0e0e10;
   --destructive: #d4183d;
   --destructive-foreground: #ffffff;
   --border: rgba(191, 195, 200, 0.1);
   --input: rgba(191, 195, 200, 0.1);
-  --ring: #FF6E2E;
-  --sidebar: #0E0E10;
-  --sidebar-foreground: #BFC3C8;
-  --sidebar-primary: #FF6E2E;
-  --sidebar-primary-foreground: #0E0E10;
-  --sidebar-accent: #3C3F44;
-  --sidebar-accent-foreground: #BFC3C8;
+  --ring: #297fff;
+  --sidebar: #0e0e10;
+  --sidebar-foreground: #bfc3c8;
+  --sidebar-primary: #297fff;
+  --sidebar-primary-foreground: #0e0e10;
+  --sidebar-accent: #3c3f44;
+  --sidebar-accent-foreground: #bfc3c8;
   --sidebar-border: rgba(191, 195, 200, 0.1);
-  --sidebar-ring: #FF6E2E;
+  --sidebar-ring: #297fff;
 }
 
 @theme inline {
-  --font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-family-display: 'Montserrat Alternates', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-family-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-family-display: "Montserrat Alternates", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -193,7 +195,12 @@
     font-family: var(--font-family-sans);
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: var(--font-family-display);
   }
 }
@@ -257,7 +264,7 @@
 
 html {
   font-size: var(--font-size);
-  background: #0E0E10;
+  background: #0e0e10;
 }
 
 /* Utility Classes */

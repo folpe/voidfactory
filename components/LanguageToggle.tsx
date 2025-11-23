@@ -10,8 +10,8 @@ import { useEffect, useRef, useState, useTransition } from "react"
 const languageButtonVariants = cva("w-full px-4 py-2 text-left text-sm transition-colors", {
   variants: {
     active: {
-      true: "bg-orange-600/20 text-orange-300",
-      false: "text-gray-300 hover:bg-orange-600/10 hover:text-orange-300",
+      true: "bg-primary/20 text-primary",
+      false: "text-gray-300 hover:bg-primary/10 hover:text-primary",
     },
   },
   defaultVariants: {
@@ -79,13 +79,13 @@ export function LanguageToggle() {
       <div className="relative" ref={dropdownRef}>
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 rounded-full border border-orange-500/30 bg-gray-900/50 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:border-orange-400/50 hover:bg-gray-900/70"
+          className="flex items-center gap-2 rounded-full border border-primary/30 bg-gray-900/50 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-gray-900/70"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           disabled={isPending}
         >
-          <Globe className="h-4 w-4 text-orange-400" strokeWidth={2} />
-          <span className="text-sm font-medium text-orange-300/90 uppercase">{locale}</span>
+          <Globe className="h-4 w-4 text-primary" strokeWidth={2} />
+          <span className="text-sm font-medium text-primary/90 uppercase">{locale}</span>
         </motion.button>
 
         <AnimatePresence>
@@ -94,7 +94,7 @@ export function LanguageToggle() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute top-full right-0 mt-2 min-w-[100px] overflow-hidden rounded-lg border border-orange-500/30 bg-gray-900/95 backdrop-blur-md"
+              className="absolute top-full right-0 mt-2 min-w-[100px] overflow-hidden rounded-lg border border-primary/30 bg-gray-900/95 backdrop-blur-md"
             >
               <button
                 onClick={() => handleLanguageChange("en")}

@@ -13,7 +13,7 @@
       "highlight2": " maîtrise",
       "part3": ". Nous forgeons des outils qui ne se contentent pas de fonctionner—ils",
       "highlight3": " dépassent les attentes",
-      "part4": ". Dans le creuset de v0rn, les idées sont testées, affinées, puis renaissent.",
+      "part4": ". Dans le creuset de void factory, les idées sont testées, affinées, puis renaissent.",
       "part5": " Ici, la version zéro devient version un."
     }
   },
@@ -55,12 +55,12 @@
       "part1": "Nous créons ce que d'autres imaginent.",
       "part2": "Chaque création est une leçon de précision."
     },
-    "manifesto": "Manifeste v0rn"
+    "manifesto": "Manifeste void factory"
   },
   "ecosystem": {
     "label": "L'ÉCOSYSTÈME",
     "title": "Connecté par Design",
-    "description": "v0rn s'inscrit dans une constellation d'innovation",
+    "description": "void factory s'inscrit dans une constellation d'innovation",
     "entities": {
       "voidCorp": "L'entité mère. Vision stratégique et infrastructure d'entreprise.",
       "volpio": "Marque sœur. Innovation grand public et expériences numériques."

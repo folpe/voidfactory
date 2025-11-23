@@ -24,7 +24,7 @@ export const CinematicEthos = () => {
         ></motion.div>
 
         {/* Vertical Accent Lines */}
-        <div className="absolute top-0 bottom-0 left-1/4 w-[1px] bg-gradient-to-b from-transparent via-[#FF6E2E]/30 to-transparent"></div>
+        <div className="absolute top-0 bottom-0 left-1/4 w-[1px] bg-gradient-to-b from-transparent via-[#297fff]/30 to-transparent"></div>
         <div className="absolute top-0 right-1/4 bottom-0 w-[1px] bg-gradient-to-b from-transparent via-[#297FFF]/30 to-transparent"></div>
       </div>
 
@@ -38,7 +38,7 @@ export const CinematicEthos = () => {
         >
           {/* Section Label */}
           <div className="mb-16 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
+            <span className="text-xs font-semibold tracking-widest text-primary">{t("label")}</span>
           </div>
 
           {/* Large Zero */}
@@ -53,10 +53,10 @@ export const CinematicEthos = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#FF6E2E] opacity-20 blur-3xl"
+              className="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#297fff] opacity-20 blur-3xl"
             ></motion.div>
 
-            <div className="bg-gradient-to-b from-[#FF6E2E] via-[#FF6E2E] to-[#FF6E2E]/30 bg-clip-text text-[180px] leading-none font-bold text-transparent md:text-[240px]">
+            <div className="bg-gradient-to-b from-[#297fff] via-[#297fff] to-[#297fff]/30 bg-clip-text text-[180px] leading-none font-bold text-transparent md:text-[240px]">
               0
             </div>
           </div>
@@ -72,7 +72,7 @@ export const CinematicEthos = () => {
             <blockquote className="mb-8 text-3xl leading-relaxed font-light text-[#BFC3C8] md:text-4xl">
               "{t("quote.part1")}
               <br />
-              <span className="font-normal text-[#FF6E2E]">{t("quote.part2")}</span>"
+              <span className="font-normal text-primary">{t("quote.part2")}</span>"
             </blockquote>
 
             <div className="flex items-center justify-center gap-3 text-[#BFC3C8]/40">
@@ -91,7 +91,7 @@ export const CinematicEthos = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.5 + i * 0.1 }}
-                className="h-2 w-2 rounded-full bg-[#FF6E2E]/50"
+                className="h-2 w-2 rounded-full bg-[#297fff]/50"
                 animate={{
                   opacity: [0.3, 1, 0.3],
                 }}

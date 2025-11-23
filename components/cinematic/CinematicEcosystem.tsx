@@ -11,12 +11,12 @@ export const CinematicEcosystem = () => {
     {
       name: "Void Corp",
       description: t("entities.voidCorp"),
-      color: "#297FFF",
+      color: "#8929ff",
     },
     {
       name: "Volpio",
       description: t("entities.volpio"),
-      color: "#FF6E2E",
+      color: "#297fff",
     },
   ]
 
@@ -36,7 +36,7 @@ export const CinematicEcosystem = () => {
         <svg className="h-full w-full" preserveAspectRatio="none">
           <motion.path
             d="M 0,50 Q 50,25 100,50"
-            stroke="#FF6E2E"
+            stroke="#297fff"
             strokeWidth="2"
             fill="none"
             vectorEffect="non-scaling-stroke"
@@ -58,7 +58,7 @@ export const CinematicEcosystem = () => {
           className="mb-24 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
+            <span className="text-xs font-semibold tracking-widest text-primary">{t("label")}</span>
           </div>
           <h2 className="mb-6 text-5xl font-bold tracking-tight text-[#BFC3C8] md:text-6xl">{t("title")}</h2>
           <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">{t("description")}</p>
@@ -97,14 +97,14 @@ export const CinematicEcosystem = () => {
                 {/* Content */}
                 <div className="relative">
                   <div className="mb-4 flex items-start justify-between">
-                    <h3 className="text-3xl font-bold text-[#BFC3C8] transition-colors group-hover:text-[#FF6E2E]">
+                    <h3 className="text-3xl font-bold text-[#BFC3C8] transition-colors group-hover:text-primary">
                       {entity.name}
                     </h3>
                     <motion.div
                       whileHover={{ scale: 1.1, rotate: 45 }}
-                      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[rgba(191,195,200,0.2)] transition-all group-hover:border-[#FF6E2E] group-hover:bg-[#FF6E2E]/10"
+                      className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full border border-[rgba(191,195,200,0.2)] transition-all group-hover:border-[#297fff] group-hover:bg-[#297fff]/10"
                     >
-                      <ArrowUpRight className="h-5 w-5 text-[#BFC3C8]/50 group-hover:text-[#FF6E2E]" />
+                      <ArrowUpRight className="h-5 w-5 text-[#BFC3C8]/50 group-hover:text-primary" />
                     </motion.div>
                   </div>
 
@@ -152,8 +152,8 @@ export const CinematicEcosystem = () => {
           <div className="inline-flex items-center gap-3 rounded-full border border-[rgba(191,195,200,0.2)] bg-[#1A1A1D] px-6 py-3">
             <div className="h-2 w-2 rounded-full bg-[#297FFF]"></div>
             <span className="text-sm text-[#BFC3C8]/60">{t("unified")}</span>
-            <span className="text-sm font-bold text-[#FF6E2E]">v0rn</span>
-            <div className="h-2 w-2 rounded-full bg-[#FF6E2E]"></div>
+            <span className="text-sm font-bold text-primary">Void Factory</span>
+            <div className="h-2 w-2 rounded-full bg-[#297fff]"></div>
           </div>
         </motion.div>
       </div>

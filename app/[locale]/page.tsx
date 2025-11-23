@@ -1,5 +1,4 @@
 import { Metadata } from "next"
-
 import { CinematicEcosystem } from "components/cinematic/CinematicEcosystem"
 import { CinematicEthos } from "components/cinematic/CinematicEthos"
 import { CinematicFooter } from "components/cinematic/CinematicFooter"
@@ -10,7 +9,7 @@ import { CinematicProcess } from "components/cinematic/CinematicProcess"
 import { LanguageToggle } from "components/LanguageToggle"
 
 export const metadata: Metadata = {
-  title: "V0rn",
+  title: "Void factory",
 }
 
 export default function Web() {
