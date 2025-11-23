@@ -1,34 +1,22 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
-  <defs>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <radialGradient id="orangeGradient" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" style="stop-color:#ff8c00;stop-opacity:1" />
-      <stop offset="50%" style="stop-color:#ff6600;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#ff4500;stop-opacity:1" />
-    </radialGradient>
-  </defs>
-
-  <!-- Background -->
-  <rect width="32" height="32" fill="#000000" rx="4"/>
-
-  <!-- Glowing zero -->
-  <ellipse cx="16" cy="16" rx="9" ry="11"
-    fill="none"
-    stroke="url(#orangeGradient)"
-    stroke-width="4"
-    filter="url(#glow)"
-    opacity="0.95"/>
-
-  <!-- Inner glow effect -->
-  <ellipse cx="16" cy="16" rx="9" ry="11"
-    fill="none"
-    stroke="#ffaa33"
-    stroke-width="1.5"
-    opacity="0.7"/>
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_10_2416)">
+<g filter="url(#filter0_d_10_2416)">
+<path d="M13.4855 23C11.8581 23 10.4051 22.6694 9.1265 22.0083C7.84786 21.3315 6.84046 20.3556 6.10427 19.0806C5.36809 17.7898 5 16.263 5 14.5C5 12.737 5.36809 11.2181 6.10427 9.94306C6.84046 8.65232 7.84786 7.67639 9.1265 7.01528C10.4051 6.33843 11.8581 6 13.4855 6C15.1128 6 16.5658 6.33843 17.8444 7.01528C19.1425 7.67639 20.1595 8.65232 20.8957 9.94306C21.6319 11.2181 22 12.737 22 14.5C22 16.263 21.6319 17.7898 20.8957 19.0806C20.1595 20.3556 19.1425 21.3315 17.8444 22.0083C16.5658 22.6694 15.1128 23 13.4855 23ZM13.4855 20.3319C14.9385 20.3319 16.0815 19.844 16.9145 18.8681C17.767 17.8921 18.1932 16.4361 18.1932 14.5C18.1932 12.5639 17.767 11.1079 16.9145 10.1319C16.0815 9.15602 14.9385 8.66806 13.4855 8.66806C12.0519 8.66806 10.9088 9.15602 10.0564 10.1319C9.22336 11.1079 8.80684 12.5639 8.80684 14.5C8.80684 16.4361 9.22336 17.8921 10.0564 18.8681C10.9088 19.844 12.0519 20.3319 13.4855 20.3319Z" fill="#297FFF"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_10_2416" x="-3.2" y="-2.2" width="33.4" height="33.4" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4.1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.160784 0 0 0 0 0.498039 0 0 0 0 1 0 0 0 0.71 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_10_2416"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_10_2416" result="shape"/>
+</filter>
+<clipPath id="clip0_10_2416">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
 </svg>

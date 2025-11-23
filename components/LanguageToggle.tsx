@@ -1,11 +1,12 @@
 "use client"
 
+import { useRouter } from "next/navigation"
 import { cva } from "class-variance-authority"
 import { Globe } from "lucide-react"
 import { AnimatePresence, motion } from "motion/react"
-import { useRouter } from "next/navigation"
-import { useLocale } from "next-intl"
 import { useEffect, useRef, useState, useTransition } from "react"
+
+import { useLocale } from "next-intl"
 
 const languageButtonVariants = cva("w-full px-4 py-2 text-left text-sm transition-colors", {
   variants: {
@@ -79,13 +80,13 @@ export function LanguageToggle() {
       <div className="relative" ref={dropdownRef}>
         <motion.button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 rounded-full border border-primary/30 bg-gray-900/50 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-gray-900/70"
+          className="border-primary/30 hover:border-primary/50 flex items-center gap-2 rounded-full border bg-gray-900/50 px-4 py-2 backdrop-blur-sm transition-all duration-300 hover:bg-gray-900/70"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
           disabled={isPending}
         >
-          <Globe className="h-4 w-4 text-primary" strokeWidth={2} />
-          <span className="text-sm font-medium text-primary/90 uppercase">{locale}</span>
+          <Globe className="text-primary h-4 w-4" strokeWidth={2} />
+          <span className="text-primary/90 text-sm font-medium uppercase">{locale}</span>
         </motion.button>
 
         <AnimatePresence>
@@ -94,7 +95,7 @@ export function LanguageToggle() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute top-full right-0 mt-2 min-w-[100px] overflow-hidden rounded-lg border border-primary/30 bg-gray-900/95 backdrop-blur-md"
+              className="border-primary/30 absolute top-full right-0 mt-2 min-w-[100px] overflow-hidden rounded-lg border bg-gray-900/95 backdrop-blur-md"
             >
               <button
                 onClick={() => handleLanguageChange("en")}
