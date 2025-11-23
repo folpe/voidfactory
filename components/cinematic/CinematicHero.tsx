@@ -2,7 +2,6 @@
 
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
-
 import { ScrollIndicator } from "./ScrollIndicator"
 
 export const CinematicHero = () => {
@@ -35,7 +34,7 @@ export const CinematicHero = () => {
 
         {/* Radial Glow */}
         <motion.div
-          className="bg-gradient-radial absolute top-1/2 left-1/2 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2 from-[#FF6E2E]/15 via-[#297FFF]/10 to-transparent blur-3xl"
+          className="bg-gradient-radial absolute top-1/2 left-1/2 h-[1200px] w-[1200px] -translate-x-1/2 -translate-y-1/2 from-[#297fff]/15 via-[#297FFF]/10 to-transparent blur-3xl"
           animate={{
             scale: [1, 1.2, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -56,7 +55,7 @@ export const CinematicHero = () => {
           transition={{ duration: 0.8 }}
           className="mb-12 inline-flex items-center gap-2 rounded-full border border-[rgba(191,195,200,0.2)] bg-[#1A1A1D] px-6 py-3 backdrop-blur-sm"
         >
-          <div className="h-2 w-2 animate-pulse rounded-full bg-[#FF6E2E]"></div>
+          <div className="h-2 w-2 animate-pulse rounded-full bg-[#297fff]"></div>
           <span className="text-sm tracking-wide text-[#BFC3C8]/70">{t("badge")}</span>
           <span className="text-sm font-semibold text-[#BFC3C8]">Void Corp</span>
         </motion.div>
@@ -72,14 +71,14 @@ export const CinematicHero = () => {
             <span className="text-[#BFC3C8]">{t("title")}</span>
             <br />
             <span className="relative inline-block">
-              <span className="text-[#BFC3C8]">V</span>
+              <span className="text-[#BFC3C8]">v</span>
               <motion.span
-                className="relative inline-block text-[#FF6E2E]"
+                className="relative inline-block text-primary"
                 animate={{
                   textShadow: [
-                    "0 0 20px rgba(255,110,46,0.5)",
-                    "0 0 40px rgba(255,110,46,0.8)",
-                    "0 0 20px rgba(255,110,46,0.5)",
+                    "0 0 20px rgba(41,127,255,0.5)",
+                    "0 0 40px rgba(41,127,255,0.8)",
+                    "0 0 20px rgba(41,127,255,0.5)",
                   ],
                 }}
                 transition={{
@@ -88,11 +87,11 @@ export const CinematicHero = () => {
                   ease: "easeInOut",
                 }}
               >
-                0
+                o
               </motion.span>
-              <span className="text-[#BFC3C8]">RN</span>
+              <span className="text-[#BFC3C8]">id Factory</span>
               <motion.div
-                className="absolute -inset-8 -z-10 rounded-full bg-[#FF6E2E] opacity-20 blur-3xl"
+                className="absolute -inset-8 -z-10 rounded-full bg-[#297fff] opacity-20 blur-3xl"
                 animate={{
                   scale: [1, 1.3, 1],
                   opacity: [0.2, 0.4, 0.2],
@@ -122,7 +121,7 @@ export const CinematicHero = () => {
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1.5, delay: 0.6 }}
-          className="mx-auto h-[2px] w-32 bg-gradient-to-r from-transparent via-[#FF6E2E] to-transparent"
+          className="mx-auto h-[2px] w-32 bg-gradient-to-r from-transparent via-[#297fff] to-transparent"
         />
       </div>
 

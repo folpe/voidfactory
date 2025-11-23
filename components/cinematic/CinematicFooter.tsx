@@ -9,7 +9,7 @@ export const CinematicFooter = () => {
   return (
     <footer className="relative overflow-hidden border-t border-[#2C2F33] px-6 py-16">
       {/* Subtle Background Glow */}
-      <div className="bg-gradient-radial absolute bottom-0 left-1/2 h-[200px] w-[800px] -translate-x-1/2 from-[#FF6E2E]/5 to-transparent blur-3xl"></div>
+      <div className="bg-gradient-radial absolute bottom-0 left-1/2 h-[200px] w-[800px] -translate-x-1/2 from-[#297fff]/5 to-transparent blur-3xl"></div>
 
       <div className="relative z-10 mx-auto max-w-[1400px]">
         <div className="flex flex-col items-center gap-8">
@@ -22,7 +22,7 @@ export const CinematicFooter = () => {
             className="relative"
           >
             <div className="text-4xl font-bold tracking-tight text-[#BFC3C8]">
-              v<span className="text-[#FF6E2E]">0</span>rn
+              v<span className="text-primary">o</span>id factory
             </div>
             <motion.div
               animate={{
@@ -34,12 +34,12 @@ export const CinematicFooter = () => {
                 repeat: Infinity,
                 ease: "easeInOut",
               }}
-              className="absolute -inset-4 -z-10 rounded-full bg-[#FF6E2E] blur-xl"
+              className="absolute -inset-4 -z-10 rounded-full bg-[#297fff] blur-xl"
             ></motion.div>
           </motion.div>
 
           {/* Divider */}
-          <div className="h-[1px] w-full max-w-[200px] bg-gradient-to-r from-transparent via-[#FF6E2E]/30 to-transparent"></div>
+          <div className="h-[1px] w-full max-w-[200px] bg-gradient-to-r from-transparent via-[#297fff]/30 to-transparent"></div>
 
           {/* Footer Text */}
           <motion.div
@@ -64,7 +64,7 @@ export const CinematicFooter = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.4 + i * 0.1 }}
-                className="h-1 w-1 rounded-full bg-[#FF6E2E]/50"
+                className="h-1 w-1 rounded-full bg-[#297fff]/50"
               ></motion.div>
             ))}
           </div>

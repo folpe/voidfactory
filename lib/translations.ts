@@ -28,7 +28,7 @@ export const translations = {
         highlight2: " maîtrise",
         part3: ". Nous forgeons des outils qui ne se contentent pas de fonctionner—ils",
         highlight3: " dépassent les attentes",
-        part4: ". Dans le creuset de v0rn, les idées sont testées, affinées, puis renaissent.",
+        part4: ". Dans le creuset de void factory, les idées sont testées, affinées, puis renaissent.",
         part5: " Ici, la version zéro devient version un.",
       },
       en: {
@@ -38,7 +38,7 @@ export const translations = {
         highlight2: " mastery",
         part3: ". We forge tools that don't just work—they",
         highlight3: " transcend expectations",
-        part4: ". In the crucible of v0rn, ideas are tested, refined, and reborn.",
+        part4: ". In the crucible of void factory, ideas are tested, refined, and reborn.",
         part5: " This is where version zero becomes version one.",
       },
     },
@@ -145,8 +145,8 @@ export const translations = {
       },
     },
     manifesto: {
-      fr: "Manifeste v0rn",
-      en: "v0rn Manifesto",
+      fr: "Manifeste void factory",
+      en: "Void factory Manifesto",
     },
   },
   ecosystem: {
@@ -159,8 +159,8 @@ export const translations = {
       en: "Connected by Design",
     },
     description: {
-      fr: "v0rn s'inscrit dans une constellation d'innovation",
-      en: "v0rn exists within a constellation of innovation",
+      fr: "void factory s'inscrit dans une constellation d'innovation",
+      en: "void factory exists within a constellation of innovation",
     },
     entities: {
       voidCorp: {

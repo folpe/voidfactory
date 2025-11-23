@@ -59,7 +59,7 @@ export const CinematicFoundry = () => {
             repeat: Infinity,
             ease: "linear",
           }}
-          className="bg-gradient-radial absolute inset-0 from-[#FF6E2E]/5 via-transparent to-transparent blur-3xl"
+          className="bg-gradient-radial absolute inset-0 from-[#297fff]/5 via-transparent to-transparent blur-3xl"
         ></motion.div>
       </div>
 
@@ -73,7 +73,7 @@ export const CinematicFoundry = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-[#FF6E2E]">{t("label")}</span>
+            <span className="text-xs font-semibold tracking-widest text-primary">{t("label")}</span>
           </div>
           <h2 className="mb-6 text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">{t("title")}</h2>
           <p className="mx-auto max-w-[700px] text-xl text-[#BFC3C8]/50">{t("description")}</p>
@@ -105,7 +105,7 @@ export const CinematicFoundry = () => {
                   <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A1D] via-[#1A1A1D]/50 to-transparent"></div>
 
                   {/* Hover Glow */}
-                  <motion.div className="absolute inset-0 bg-gradient-to-br from-[#FF6E2E]/0 to-[#297FFF]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-30"></motion.div>
+                  <motion.div className="absolute inset-0 bg-gradient-to-br from-[#297fff]/0 to-[#297FFF]/0 opacity-0 transition-opacity duration-500 group-hover:opacity-30"></motion.div>
 
                   {/* Lock Icon */}
                   <div className="absolute top-4 right-4 flex h-10 w-10 items-center justify-center rounded-full border border-[rgba(191,195,200,0.2)] bg-[#0E0E10]/80 backdrop-blur-sm">
@@ -123,7 +123,7 @@ export const CinematicFoundry = () => {
                 {/* Content */}
                 <div className="p-6">
                   <div className="mb-2 flex items-start justify-between gap-4">
-                    <h3 className="text-xl font-bold text-[#BFC3C8] transition-colors group-hover:text-[#FF6E2E]">
+                    <h3 className="text-xl font-bold text-[#BFC3C8] transition-colors group-hover:text-primary">
                       {project.title}
                     </h3>
                   </div>
@@ -131,14 +131,14 @@ export const CinematicFoundry = () => {
 
                   {/* Internal Badge */}
                   <div className="mt-4 border-t border-[rgba(191,195,200,0.1)] pt-4">
-                    <span className="text-xs font-semibold tracking-wide text-[#FF6E2E]/70">{t("badge")}</span>
+                    <span className="text-xs font-semibold tracking-wide text-primary/70">{t("badge")}</span>
                   </div>
                 </div>
               </div>
 
               {/* Corner Accent */}
-              <div className="absolute -top-1 -right-1 h-4 w-4 border-t-2 border-r-2 border-[#FF6E2E] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
-              <div className="absolute -bottom-1 -left-1 h-4 w-4 border-b-2 border-l-2 border-[#FF6E2E] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute -top-1 -right-1 h-4 w-4 border-t-2 border-r-2 border-[#297fff] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+              <div className="absolute -bottom-1 -left-1 h-4 w-4 border-b-2 border-l-2 border-[#297fff] opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
             </motion.div>
           ))}
         </div>
