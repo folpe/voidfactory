@@ -3,7 +3,7 @@
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
-export const CinematicEthos = () => {
+export const Ethos = () => {
   const t = useTranslations("ethos")
 
   return (
@@ -38,7 +38,7 @@ export const CinematicEthos = () => {
         >
           {/* Section Label */}
           <div className="mb-16 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-primary">{t("label")}</span>
+            <span className="text-primary text-xs font-semibold tracking-widest">{t("label")}</span>
           </div>
 
           {/* Large Zero */}
@@ -57,7 +57,7 @@ export const CinematicEthos = () => {
             ></motion.div>
 
             <div className="bg-gradient-to-b from-[#297fff] via-[#297fff] to-[#297fff]/30 bg-clip-text text-[180px] leading-none font-bold text-transparent md:text-[240px]">
-              0
+              o
             </div>
           </div>
 
@@ -72,7 +72,7 @@ export const CinematicEthos = () => {
             <blockquote className="mb-8 text-3xl leading-relaxed font-light text-[#BFC3C8] md:text-4xl">
               "{t("quote.part1")}
               <br />
-              <span className="font-normal text-primary">{t("quote.part2")}</span>"
+              <span className="text-primary font-normal">{t("quote.part2")}</span>"
             </blockquote>
 
             <div className="flex items-center justify-center gap-3 text-[#BFC3C8]/40">

@@ -3,7 +3,7 @@
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
-export const CinematicPhilosophy = () => {
+export const Philosophy = () => {
   const t = useTranslations("philosophy")
 
   return (
@@ -21,7 +21,7 @@ export const CinematicPhilosophy = () => {
         >
           {/* Section Label */}
           <div className="mb-12 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-primary">{t("label")}</span>
+            <span className="text-primary text-xs font-semibold tracking-widest">{t("label")}</span>
           </div>
 
           {/* Manifesto */}
@@ -31,18 +31,18 @@ export const CinematicPhilosophy = () => {
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ duration: 1.5, delay: 0.3 }}
-              className="pointer-events-none absolute top-0 -left-8 text-[200px] leading-none font-bold text-primary/5"
+              className="text-primary/5 pointer-events-none absolute top-0 -left-8 text-[200px] leading-none font-bold"
             >
               "
             </motion.div>
 
             <p className="text-2xl leading-relaxed font-light tracking-wide text-[#BFC3C8] md:text-3xl">
               {t("text.part1")}
-              <span className="font-normal text-primary">{t("text.highlight1")}</span>
+              <span className="text-primary font-normal">{t("text.highlight1")}</span>
               {t("text.part2")}
-              <span className="font-normal text-primary">{t("text.highlight2")}</span>
+              <span className="text-primary font-normal">{t("text.highlight2")}</span>
               {t("text.part3")}
-              <span className="font-normal text-primary">{t("text.highlight3")}</span>
+              <span className="text-primary font-normal">{t("text.highlight3")}</span>
               {t("text.part4")}
               <span className="text-[#BFC3C8]/60">{t("text.part5")}</span>
             </p>

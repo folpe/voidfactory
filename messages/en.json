@@ -41,12 +41,25 @@
     "description": "A glimpse into the arsenal. Each project, a testament to craft and precision.",
     "badge": "⚡ INTERNAL USE ONLY",
     "categories": {
-      "internalTool": "Internal Tool",
-      "apiGateway": "API Gateway",
-      "buildSystem": "Build System",
-      "dataPipeline": "Data Pipeline",
-      "analyticsEngine": "Analytics Engine",
-      "infrastructure": "Infrastructure"
+      "hub": "Business Hub",
+      "mvp": "MVP",
+      "library": "Library",
+      "futur": "Futur project..."
+    },
+    "descriptions": {
+      "nexus": "Centralized control hub for all business operations and project management",
+      "atlas": "Reusable component library to accelerate development",
+      "nebulabox": "Rapid prototype to validate concepts before full development",
+      "cipher": "Project idea under analysis",
+      "quantum": "Project idea under analysis",
+      "onyx": "Project idea under analysis"
+    },
+    "status": {
+      "idea": "Idea",
+      "analysis": "Under Review",
+      "build": "In Progress",
+      "released": "Online",
+      "dropped": "Archived"
     }
   },
   "ethos": {

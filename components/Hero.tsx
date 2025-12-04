@@ -1,10 +1,10 @@
 "use client"
 
+import { ScrollIndicator } from "./ScrollIndicator"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
-import { ScrollIndicator } from "./ScrollIndicator"
 
-export const CinematicHero = () => {
+export const Hero = () => {
   const t = useTranslations("hero")
 
   return (
@@ -73,7 +73,7 @@ export const CinematicHero = () => {
             <span className="relative inline-block">
               <span className="text-[#BFC3C8]">v</span>
               <motion.span
-                className="relative inline-block text-primary"
+                className="text-primary relative inline-block"
                 animate={{
                   textShadow: [
                     "0 0 20px rgba(41,127,255,0.5)",

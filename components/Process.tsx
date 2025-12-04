@@ -1,30 +1,17 @@
 "use client"
 
-import { Flame, Rocket, Search } from "lucide-react"
-
+import { PILLARS } from "./pillars"
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
-export const CinematicProcess = () => {
+export const Process = () => {
   const t = useTranslations("process")
 
-  const pillars = [
-    {
-      icon: Search,
-      title: t("pillars.prequalify.title"),
-      description: t("pillars.prequalify.description"),
-    },
-    {
-      icon: Flame,
-      title: t("pillars.forge.title"),
-      description: t("pillars.forge.description"),
-    },
-    {
-      icon: Rocket,
-      title: t("pillars.scale.title"),
-      description: t("pillars.scale.description"),
-    },
-  ]
+  const pillars = PILLARS.map((p) => ({
+    ...p,
+    title: t(p.titleKey),
+    description: t(p.descriptionKey),
+  }))
 
   return (
     <section className="relative overflow-hidden px-6 py-40">
@@ -44,7 +31,7 @@ export const CinematicProcess = () => {
           className="mb-32 text-center"
         >
           <div className="mb-8 inline-block rounded-full border border-[rgba(191,195,200,0.2)] px-4 py-2">
-            <span className="text-xs font-semibold tracking-widest text-primary">{t("label")}</span>
+            <span className="text-primary text-xs font-semibold tracking-widest">{t("label")}</span>
           </div>
           <h2 className="text-6xl font-bold tracking-tight text-[#BFC3C8] md:text-7xl">{t("title")}</h2>
         </motion.div>
@@ -69,7 +56,7 @@ export const CinematicProcess = () => {
                 repeat: Infinity,
                 ease: "linear",
               }}
-              className="absolute inset-y-0 w-[30%] bg-gradient-to-r from-transparent via-[#297fff] to-transparent"
+              className="absolute inset-y-0 w-[30%] bg-linear-to-r from-transparent via-[#297fff] to-transparent"
             ></motion.div>
           </motion.div>
 
@@ -107,19 +94,19 @@ export const CinematicProcess = () => {
                     }}
                     className="relative flex h-20 w-20 items-center justify-center rounded-full border border-[#297fff]/30 bg-[#1A1A1D] transition-all duration-300"
                   >
-                    <Icon className="h-10 w-10 text-primary" />
+                    <Icon className="text-primary h-10 w-10" />
                     <motion.div className="absolute inset-0 rounded-full bg-[#297fff] opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-20"></motion.div>
                   </motion.div>
 
                   {/* Number Badge */}
-                  <div className="absolute -top-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#297fff] to-[#E55A1A] shadow-lg">
+                  <div className="absolute -top-2 -right-2 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-[#297fff] to-[#8a1ae5] shadow-lg">
                     <span className="text-sm font-bold text-[#0E0E10]">{String(index + 1).padStart(2, "0")}</span>
                   </div>
                 </div>
 
                 {/* Content */}
                 <div className="max-w-[280px] text-center">
-                  <h3 className="mb-4 text-3xl font-bold text-[#BFC3C8] transition-colors duration-300 group-hover:text-primary md:text-4xl">
+                  <h3 className="group-hover:text-primary mb-4 text-3xl font-bold text-[#BFC3C8] transition-colors duration-300 md:text-4xl">
                     {pillar.title}
                   </h3>
                   <p className="text-base leading-relaxed text-[#BFC3C8]/60 md:text-lg">{pillar.description}</p>

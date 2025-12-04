@@ -41,12 +41,25 @@
     "description": "Un aperçu de l'arsenal. Chaque projet, un témoignage de savoir-faire et de précision.",
     "badge": "⚡ USAGE INTERNE UNIQUEMENT",
     "categories": {
-      "internalTool": "Outil Interne",
-      "apiGateway": "Passerelle API",
-      "buildSystem": "Système de Build",
-      "dataPipeline": "Pipeline de Données",
-      "analyticsEngine": "Moteur d'Analyse",
-      "infrastructure": "Infrastructure"
+      "hub": "Hub Business",
+      "mvp": "MVP",
+      "library": "Librairie",
+      "futur": "Futur projet"
+    },
+    "descriptions": {
+      "nexus": "Centre de contrôle centralisé pour toutes les opérations business et la gestion des projets.",
+      "atlas": "Librairie de composants réutilisables pour accélérer le développement.",
+      "nebulabox": "Prototype rapide pour valider les concepts avant le développement complet.",
+      "cipher": "Idée projet en cours d'analyse...",
+      "quantum": "Idée projet en cours d'analyse...",
+      "onyx": "Idée projet en cours d'analyse..."
+    },
+    "status": {
+      "idea": "Idée",
+      "analysis": "En réflexion",
+      "build": "En cours",
+      "released": "En ligne",
+      "dropped": "Archivé"
     }
   },
   "ethos": {

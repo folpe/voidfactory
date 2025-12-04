@@ -3,7 +3,7 @@
 import { motion } from "motion/react"
 import { useTranslations } from "next-intl"
 
-export const CinematicFooter = () => {
+export const Footer = () => {
   const t = useTranslations("footer")
 
   return (
